@@ -25,7 +25,7 @@ class ComandTests(SimpleTestCase):
     @patch('time.sleep')
     # next patches are added in inside-out order
     def test_wait_for_db_delay(self, patched_sleep, patched_check):
-        "Test waiting for database when getting OperationalError."
+        """Test waiting for database when getting OperationalError."""
         """When db haven't started we receive Psycopg2Error, when
         started yet not ready to take connection - OperationalError
         This is only a way to mock the behaviour of loading db,
